@@ -9,6 +9,8 @@ int main()
     //use arrays
     //A is ASCII code 65, Z is ASCII code 90
     //a is ASCII code 97, z is ASCII code 122
+        //can subtract 32 from lower case to turn into upper case
+        //a - 32 = A
     //potentially use switch function so can pick between decode, encode etc
     //comment student who previously failed ENGG1003 can understand
         //most lines need comment
