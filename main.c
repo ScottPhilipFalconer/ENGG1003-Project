@@ -3,17 +3,24 @@
 int main()
 {
     
+    //each task as different function
     //will need to move code around, not final order
     //must initialise all variables etc first
+    //use arrays
+    //A is ASCII code 65, Z is ASCII code 90
+    //a is ASCII code 97, z is ASCII code 122
     
-    /*--------------------pass mark--------------------*/
     
-        /*---------rotation cypher---------*/
+    /*------------------------------pass mark------------------------------*/
+    
+    
+        /*--------------rotation cypher--------------*/
         
             //encryption
                 //scan text to encode
                     //scanf function
                     //user prompt
+                    //one word at a time?
                     //input data upper case
                     //user prompt includes key?
                     //read as string/char
@@ -23,7 +30,7 @@ int main()
                     //number of letters offset
                     //create algorithm using key
                     //insert scanned input into algorithm
-                    //store result
+                    //store result in ?
                 //print encoded text to console
                     //printf function
                     //print original input alongside encoded input?
@@ -33,6 +40,7 @@ int main()
                 //scan encoded text
                     //scanf function
                     //user prompt
+                    //one word at a time?
                     //input data upper case
                     //user prompt includes key?
                     //read as string/char
@@ -42,16 +50,15 @@ int main()
                     //number of letters offset
                     //create algorithm using key
                     //insert scanned input into algorithm
-                    //store result
+                    //store result in ?
                 //print decoded text to console
                     //printf function
                     //print original input alongside encoded input?
                     //print key?
                 
-        /*---------------------------------*/
+        /*-------------------------------------------*/
         
-    
-        /*---------substitution cypher---------*/
+        /*--------------substitution cypher--------------*/
         
             //encryption
                 //scan text to encode
@@ -63,37 +70,53 @@ int main()
                 //run decoding algorithm provided
                 //print decoded text to console
                 
-        /*-------------------------------------*/
+        /*-----------------------------------------------*/
         
-    /*-------------------------------------------------*/
+        
+    /*---------------------------------------------------------------------*/
     
     
-    /*--------------------advanced--------------------*/
+    /*------------------------------advanced------------------------------*/
     
-        /*---------rotation cypher---------*/
+        /*--------------rotation cypher--------------*/
         
             //scan text to decode
+                //whitespace issue if stored as string
+                //one word at a time?
             //run decoding algorithm
+                //can use spell checker algorithm
+                //assumptions about common words/letters
+                    //a, I, the etc
                 //unknown key
+                //letters will be offset by a constant number
                 //need exit statement
+                    //potentially related to spellchecker
             //print decoded text to console
             
-        /*---------------------------------*/
+        /*-------------------------------------------*/
         
-        /*---------substitution cypher---------*/
+        /*--------------substitution cypher--------------*/
         
             //scan text to decode
+                //whitespace issue if stored as string
+                //one word at a time?
             //run decoding algorithm
+                //can use spellchecker algorithm
+                //assumption about common words/letters
+                    //a, I, the etc
                 //unknown key
+                //much more difficult than rotation cypher
+                    //brute force common words and assume?
+                    //
                 //need exit statement
+                    //potetntially related to spellchecker
             //print decoded text to console
             
-        /*-------------------------------------*/
+        /*-----------------------------------------------*/
         
-    /*------------------------------------------------*/
+        
+    /*--------------------------------------------------------------------*/
     
-    //A is ASCII code 65, Z is ASCII code 90
-    //a is ASCII code 97, z is ASCII code 122
-
+    
     return 0;
 }
