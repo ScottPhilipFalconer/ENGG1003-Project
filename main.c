@@ -4,6 +4,7 @@ int main()
 {
     
     //will need to move code around, not final order
+    //must initialise all variables etc first
     
     /*--------------------pass mark--------------------*/
     
@@ -13,9 +14,10 @@ int main()
                 //scan text to encode
                     //scanf function
                     //user prompt
+                    //input data upper case
                     //user prompt includes key?
                     //read as string/char
-                    //if string will only be read until whitespace
+                    //string will only be read until whitespace
                     //assign to variable/string/char
                 //run encoding key provided
                     //number of letters offset
@@ -30,10 +32,21 @@ int main()
             //decryption
                 //scan encoded text
                     //scanf function
+                    //user prompt
+                    //input data upper case
+                    //user prompt includes key?
                     //read as string/char
+                    //string will only be read until whitespace
                     //assign to variable/string/char
-                //run decoding algorithm provided
+                //run decoding key provided
+                    //number of letters offset
+                    //create algorithm using key
+                    //insert scanned input into algorithm
+                    //store result
                 //print decoded text to console
+                    //printf function
+                    //print original input alongside encoded input?
+                    //print key?
                 
         /*---------------------------------*/
         
@@ -61,6 +74,8 @@ int main()
         
             //scan text to decode
             //run decoding algorithm
+                //unknown key
+                //need exit statement
             //print decoded text to console
             
         /*---------------------------------*/
@@ -69,6 +84,8 @@ int main()
         
             //scan text to decode
             //run decoding algorithm
+                //unknown key
+                //need exit statement
             //print decoded text to console
             
         /*-------------------------------------*/
