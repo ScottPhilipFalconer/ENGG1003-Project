@@ -71,13 +71,47 @@ int main()
         
             //encryption
                 //scan text to encode
-                //run encoding algorithm provided
+                    //scanf function
+                    //user prompt
+                    //one word at a time?
+                    //input data upper case
+                    //user prompt includes key?
+                    //read as string/char
+                    //string will only be read until whitespace
+                    //assign to variable/string/char
+                //run encoding using key provided
+                    //during loop?
+                    //create algorithm using key
+                        //may be unwieldy
+                        //each letter has its own substitution rule
+                    //insert scanned input into algorithm
+                    //store result in ?
                 //print encoded text to console
+                    //printf function
+                    //print original input alongside encoded input?
+                    //print key?
                 
             //decryption
                 //scan text to decode
-                //run decoding algorithm provided
+                    //scanf function
+                    //user prompt
+                    //one word at a time?
+                    //input data upper case
+                    //user prompt includes key?
+                    //read as string/char
+                    //string will only be read until whitespace
+                    //assign to variable/string/char
+                //run decoding using key provided
+                    //during loop?
+                    //create algorithm using key
+                        //may be unwieldy
+                        //each letter has own substitution rule
+                    //insert scanned input into algorithm
+                    //store result in ?
                 //print decoded text to console
+                    //printf function
+                    //print original input alongside encoded input?
+                    //print key?
                 
         /*-----------------------------------------------*/
         
