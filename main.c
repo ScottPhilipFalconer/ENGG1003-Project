@@ -9,7 +9,13 @@ int main()
     //use arrays
     //A is ASCII code 65, Z is ASCII code 90
     //a is ASCII code 97, z is ASCII code 122
-    //potentially switch menu so can pick between decode, encode etc
+    //potentially use switch function so can pick between decode, encode etc
+    //comment student who previously failed ENGG1003 can understand
+        //most lines need comment
+        //large comment at top to explain what program does at high level
+        //block comment above every function for explanation
+        //describe program flow control
+    //consistent indentation style
     
     
     /*------------------------------pass mark------------------------------*/
