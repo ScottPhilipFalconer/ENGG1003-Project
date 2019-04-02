@@ -97,6 +97,7 @@ int main()
                 //assumptions about common words/letters
                     //a, I, the etc
                 //unknown key
+                    //can potentially brute force the whole thing
                 //letters will be offset by a constant number
                 //need exit statement
                     //potentially related to spellchecker
