@@ -117,7 +117,8 @@ int main()
                 //unknown key
                 //much more difficult than rotation cypher
                     //brute force common words and assume?
-                    //
+                    //assume e most common letter?
+                    //look for known/assumed text eg weather reports in enigma?
                 //need exit statement
                     //potentially related to spellchecker
             //print decoded text to console
