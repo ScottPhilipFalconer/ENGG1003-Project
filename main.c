@@ -4,11 +4,12 @@ int main()
 {
     
     //each task as different function
-    //will need to move code around, not final order
+    //may need to move code around, not final order
     //must initialise all variables etc first
     //use arrays
     //A is ASCII code 65, Z is ASCII code 90
     //a is ASCII code 97, z is ASCII code 122
+    //potentially switch menu so can pick between decode, encode etc
     
     
     /*------------------------------pass mark------------------------------*/
@@ -27,6 +28,7 @@ int main()
                     //string will only be read until whitespace
                     //assign to variable/string/char
                 //run encoding key provided
+                    //during loop?
                     //number of letters offset
                     //create algorithm using key
                     //insert scanned input into algorithm
@@ -47,6 +49,7 @@ int main()
                     //string will only be read until whitespace
                     //assign to variable/string/char
                 //run decoding key provided
+                    //during loop?
                     //number of letters offset
                     //create algorithm using key
                     //insert scanned input into algorithm
@@ -109,7 +112,7 @@ int main()
                     //brute force common words and assume?
                     //
                 //need exit statement
-                    //potetntially related to spellchecker
+                    //potentially related to spellchecker
             //print decoded text to console
             
         /*-----------------------------------------------*/
