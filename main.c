@@ -48,10 +48,11 @@ int main()
                 
             //decryption
                 //scan encoded text
-                    printf("user prompt: ");
-                    scanf("%c", &word);
-                    //one word at a time?
-                    //input data upper case
+                    printf("Please enter the first word to be decoded, in all upper case: ");
+                    //perhaps replace first with %d st/nd/rd/th
+                    scanf("%c", &wordnumber);
+                    //repeat above lines until message complete
+                    //potentially input 0 to end input
                     //user prompt includes key?
                     //read as string/char
                     //string will only be read until whitespace
