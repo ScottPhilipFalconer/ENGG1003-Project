@@ -27,8 +27,8 @@ int main()
         
             //encryption
                 //scan text to encode
-                    //scanf function
-                    //user prompt
+                    printf("user prompt");
+                    scanf();
                     //one word at a time?
                     //input data upper case
                     //user prompt includes key?
@@ -42,14 +42,13 @@ int main()
                     //insert scanned input into algorithm
                     //store result in ?
                 //print encoded text to console
-                    //printf function
-                    //print original input alongside encoded input?
-                    //print key?
+                    printf("encoded text, original input?, key?");
+
                 
             //decryption
                 //scan encoded text
-                    //scanf function
-                    //user prompt
+                    printf("user prompt");
+                    scanf();
                     //one word at a time?
                     //input data upper case
                     //user prompt includes key?
@@ -63,9 +62,8 @@ int main()
                     //insert scanned input into algorithm
                     //store result in ?
                 //print decoded text to console
-                    //printf function
-                    //print original input alongside encoded input?
-                    //print key?
+                    printf("decoded text, original input?, key?");
+
                 
         /*-------------------------------------------*/
         
