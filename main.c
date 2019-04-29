@@ -32,9 +32,9 @@ int main()
             switch(option)
             {
                 case 1:
-                    for(number = 0; ((number < 100) && (text[number] != "\0")); number++)
-                        if((text[number] >= 65) && (text[number] <= 90))
-                            text[number] = text[number] + key;
+                    for(letter = 0; ((letter < 100) && (text[letter] != "\0")); letter++)
+                        if((text[letter] >= 65) && (text[letter] <= 90))
+                            text[letter] = text[letter] + key;
                             printf("Key: %d\n", key);
                             printf("Encrypted text: %s\n", text);
                             return 0;
