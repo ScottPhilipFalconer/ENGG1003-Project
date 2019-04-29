@@ -2,18 +2,21 @@
 
 int main()
 {
-    int key, initoption, y, z;
+    int key, initoption, y, z; //this line initialises 4 int variables.
     
     /*----------------------------------------*/
+    
     //the following block of code gives the user a choice of four options.
+    //The user enters the desired options number.
     printf("Please choose an option:\n");
     printf("1. Rotation cypher encryption.\n2. Rotation cypher decryption.\n");
     printf("3. Substitution cypher encryption.\n4. Substitution cypher decryption.\n");
     scanf("%d", &initoption);
-    //The user enters the desired options number.
     //The program assigns the entered number to the integer variable initoption.
     //This allows the use of a switch case function.  
+    
     /*----------------------------------------*/
+    
     //each task as different function
     //may need to move code around, not final order
     //must initialise all variables etc first
