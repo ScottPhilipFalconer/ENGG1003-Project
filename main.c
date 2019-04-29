@@ -8,6 +8,7 @@ int main()
     //These lines initialise the variables to be used in the program.
     int option, key, letter; //this line initialises 3 integer variables called "option", "key", and "letter".
     char text[100], substitute[100]; //this line initialises a character array called "text", and a similar array called "substitute".
+    char alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     
     /*----------------------------------------*/
     
@@ -88,13 +89,19 @@ int main()
         case 2:
             //Case 2 is for a substitution cypher.
             printf("You have selected substitution cypher.\n");
-            printf("Please enter the substitution cypher key: \n");
-            scanf("%d", &key); //This line scans and stores the data entered into the variable "key".
+            printf("Please enter the substitute alphabet: \n");
+            scanf("%s", &substitute); //This line scans and stores the data entered into the array "substitute".
             printf("Please enter the message, in all capital letters and with no spaces: \n");
             scanf("%s", &text);
             printf("Select an option:\n");
             printf("1. Encrypt\n2. Decrypt\n");
             scanf("%d", &option);
+            
+            switch(option)
+            {
+                case 1:
+                    
+            }
 
         default:
             printf("Invalid option.\n");
