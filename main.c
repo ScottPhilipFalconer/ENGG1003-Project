@@ -29,6 +29,7 @@ int main()
     //The user enters the number corresponding to their desired option.
     printf("Please choose an option:\n");
     printf("1. Rotation cypher\n2. Substitution cypher\n");
+    printf("3. Brute-force attack of rotation cypher\n");
     scanf("%d", &option);
     //The program assigns the entered number to the integer variable "option".
     //This allows the use of a switch case function.  
@@ -123,6 +124,29 @@ int main()
                     printf("%s", text);
                     return 0;
             }
+            
+        case 3:
+            printf("You have selected brute-force attack on rotation cypher\n");
+            printf("Please enter the message in all caps with no spaces: \n");
+            scanf("%s", &text);
+            key = 0;
+            while(key < 26)
+            {
+                for(letter = 0; ((letter < 100) && (text[letter] != "\0")); letter++)
+                    if((text[letter] >= 65) && (text[letter] <= 90))
+                        //This if statement is the same as in case 1.
+                    {
+                        text[letter] = text[letter] - key; //This formula is the reverse of case 1, allowing for decryption.
+                    }
+                    if(text[letter] < 65) //There is a possibility the value of a letter may be less than A, this if statement allows for that.
+                    {
+                            text[letter] = text[letter] + 90 - 65 + 1; //This line allows values less than A to "wrap around" the alphabet back to Z.
+                    }
+                    printf("Key: %d\n", key); //This line prints the key entered by the user.
+                    printf("Decrypted text: %s\n", text); //This line prints the decrypted text.
+                    key++;
+            }
+        return 0;
 
         default:
             printf("Invalid option.\n");
