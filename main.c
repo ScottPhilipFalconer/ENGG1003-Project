@@ -10,8 +10,7 @@ int main()
     //the following block of code gives the user a choice of four options.
     //The user enters the desired options number.
     printf("Please choose an option:\n");
-    printf("1. Rotation cypher encryption.\n2. Rotation cypher decryption.\n");
-    printf("3. Substitution cypher encryption.\n4. Substitution cypher decryption.\n");
+    printf("1. Rotation cypher\n2. Substitution cypher\n");
     scanf("%d", &option);
     //The program assigns the entered number to the integer variable option.
     //This allows the use of a switch case function.  
@@ -21,25 +20,31 @@ int main()
     switch(option)
     {
         case 1:
-            printf("\nYou have selected rotation cypher encryption.\n");
+            printf("You have selected rotation cypher.\n");
             printf("Please enter the rotation cypher key: \n");
             scanf("%d", &key);
-            printf("Enter a word to be encrypted, in all capital letters: \n");
-            scanf("%c", &word);
-        
+            printf("Select an option.\n");
+            printf("1. Encrypt\n2. Decrypt");
+            scanf("%d", &option);
+            
+            switch(option)
+            {
+                case 1:
+                    printf("Enter a word to be encrypted, in all capital letters: \n");
+                    scanf("%c", &word);
+                case 2:
+                    printf("Enter a word to be decrypted, in all capital letters: \n");
+                    scanf("%c", &word);
+                default:
+                    printf("Please select a valid option.\n")
+            }
         case 2:
-            printf("\nYou have selected rotation cypher decryption.\n");
+            printf("You have selected substitution cypher.\n");
             printf("Please enter the rotation cypher key: \n");
             scanf("%d", &key);
-        
-        case 3:
-            printf("\nYou have selected substitution cypher encryption.\n");
-        
-        case 4:
-            printf("\nYou have selected substitution cypher decryption.\n");
-        
+
         default:
-            printf("\nPlease select a valid option.");
+            printf("Please select a valid option.\n");
     }
     
     //each task as different function
