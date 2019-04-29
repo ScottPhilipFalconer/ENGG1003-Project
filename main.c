@@ -3,7 +3,7 @@
 int main()
 {
     int option, key; //this line initialises 2 int variables.
-    char word;
+    char text[100], letter;
     
     /*----------------------------------------*/
     
