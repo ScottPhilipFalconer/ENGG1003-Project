@@ -32,7 +32,7 @@ int main()
                 case 1:
                     printf("Enter a word to be encrypted, in all capital letters: \n");
                     scanf("%c", &word);
-                    return option;
+                    break;
                 case 2:
                     printf("Enter a word to be decrypted, in all capital letters: \n");
                     scanf("%c", &word);
@@ -41,7 +41,7 @@ int main()
             }
         case 2:
             printf("You have selected substitution cypher.\n");
-            printf("Please enter the rotation cypher key: \n");
+            printf("Please enter the substitution cypher key: \n");
             scanf("%d", &key);
 
         default:
