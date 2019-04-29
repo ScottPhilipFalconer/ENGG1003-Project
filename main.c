@@ -1,3 +1,14 @@
+/*This program attempts to both encrypt and decrypt cyphers depending on the user's choice.
+The user has two options to choose from initially, the rotation cypher or the substitution cypher.
+The user must input a key for the rotation cypher, and a substitute alphabet for the substitution cypher.
+Following this the user will input their message to be encrytped or decrypted.
+The user then chooses whether to encrypt or decrypt the message, which is then printed to the console.*/
+
+
+
+
+
+
 #include <stdio.h>
 
 int main()
@@ -6,9 +17,9 @@ int main()
     
     //The following two lines are the setup code.
     //These lines initialise the variables to be used in the program.
-    int option, key, letter; //this line initialises 3 integer variables called "option", "key", and "letter".
-    char text[100], substitute[26]; //this line initialises a character array called "text", and a similar but smaller array called "substitute".
-    char alphabet[26] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    int option, key, letter; //this line initialises 3 integer variables called "option", "key", and "letter", these will be used to store simple data.
+    char text[100], substitute[26]; //this line initialises a character array called "text", and a similar but smaller array called "substitute", these will be used to store more complex or longer data.
+    char alphabet[26] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; //This line initialises a baseline alphabet for use with the substitution cypher.
     
     /*----------------------------------------*/
     
@@ -92,45 +103,31 @@ int main()
             printf("Please enter the substitute alphabet: \n");
             scanf("%s", &substitute); //This line scans and stores the data entered into the array "substitute".
             printf("Please enter the message, in all capital letters and with no spaces: \n");
-            scanf("%s", &text);
+            scanf("%s", &text); //This line scans and stores the data into the array "text".
             printf("Select an option:\n");
             printf("1. Encrypt\n2. Decrypt\n");
-            scanf("%d", &option);
+            scanf("%d", &option); //This line allows the user to input their preferred option.
             
             switch(option)
             {
-                case 1:
-                    while(text[letter] / alphabet[letter] == 1)
-                    {    
-                        alphabet[letter] = substitute[letter];
-                        text[letter] = alphabet[letter];
-                        letter++;
-                    }
-                printf("%s", text);
-                return 0;
+                case 1: //This case was meant to encrypt the message given by the user.
+                    for(letter = 0; ((letter < 100) && (text[letter] != "\0")); letter++)
+                    //the initial for loop was meant to give the conditions for which the letters would be replaced.
+                    //the for loop is incorrect, leading to incorrect encryptions.
+                        alphabet[letter] = substitute[letter];//This line assigns the substitute alphabet letter by letter to the initialised standard alphabet.
+                        text[letter] = alphabet[letter];//this line, when combined with the for loop, was meant to convert each letter in the text succesively to the new alphabet.
+                    //through different combinations of command I realised my intial assumption of how the above loop would work was incorrect.
+                    //It either prints the standard message, the substitute alphabet in order, or a combination of the two.
+                    printf("%s", text);
+                    return 0;
             }
 
         default:
             printf("Invalid option.\n");
     }
-    
-    //each task as different function
-    //may need to move code around, not final order
-    //must initialise all variables etc first
-    //use arrays
-    //A is ASCII code 65, Z is ASCII code 90
-    //a is ASCII code 97, z is ASCII code 122
-        //can subtract 32 from lower case to turn into upper case
-        //a - 32 = A
-    //potentially use switch function so can pick between decode, encode etc
-    //comment student who previously failed ENGG1003 can understand
-        //most lines need comment
-        //large comment at top to explain what program does at high level
-        //block comment above every function for explanation
-        //describe program flow control
-    //consistent indentation style
-    
-    
+
+//The following is my inital pseudocode for the parts of this assessment I failed to complete.
+
     /*------------------------------pass mark------------------------------*/
 
         
