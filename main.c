@@ -3,6 +3,7 @@
 int main()
 {
     int option, key; //this line initialises 2 int variables.
+    char word;
     
     /*----------------------------------------*/
     
@@ -23,9 +24,8 @@ int main()
             printf("\nYou have selected rotation cypher encryption.\n");
             printf("Please enter the rotation cypher key: \n");
             scanf("%d", &key);
-            printf("Please select an option.\n");
-            printf("1. Enter a word to be encrypted.\n 2. End message.\n")
-            scanf("%d", &option);
+            printf("Enter a word to be encrypted, in all capital letters: \n");
+            scanf("%c", &word);
         
         case 2:
             printf("\nYou have selected rotation cypher decryption.\n");
@@ -66,7 +66,7 @@ int main()
         
             //encryption
                 //scan text to encode
-                    printf("Please enter a word to be encoded, in all upper case: \n"); //this line will print the enclosed text to the console with a space at the end
+                  /*  printf("Please enter a word to be encoded, in all upper case: \n"); //this line will print the enclosed text to the console with a space at the end
                     scanf("%c", &wordnumber); //this line will scan a word entered by the user, and store it as a character in the variable wordnumber
                     //repeat above lines until message complete
                     //potentially input 0 to end input
