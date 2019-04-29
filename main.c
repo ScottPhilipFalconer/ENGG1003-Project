@@ -36,7 +36,7 @@ int main()
                     printf("Enter a word to be decrypted, in all capital letters: \n");
                     scanf("%c", &word);
                 default:
-                    printf("Please select a valid option.\n")
+                    printf("Please select a valid option.\n");
             }
         case 2:
             printf("You have selected substitution cypher.\n");
