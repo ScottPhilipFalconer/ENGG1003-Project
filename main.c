@@ -2,7 +2,7 @@
 
 int main()
 {
-    int initoption, rotkey, subkey; //this line initialises 3 int variables.
+    int option, key; //this line initialises 2 int variables.
     
     /*----------------------------------------*/
     
@@ -11,21 +11,23 @@ int main()
     printf("Please choose an option:\n");
     printf("1. Rotation cypher encryption.\n2. Rotation cypher decryption.\n");
     printf("3. Substitution cypher encryption.\n4. Substitution cypher decryption.\n");
-    scanf("%d", &initoption);
-    //The program assigns the entered number to the integer variable initoption.
+    scanf("%d", &option);
+    //The program assigns the entered number to the integer variable option.
     //This allows the use of a switch case function.  
     
     /*----------------------------------------*/
     
-    switch(initoption)
+    switch(option)
     {
         case 1:
             printf("\nYou have selected rotation cypher encryption.\n");
             printf("Please enter the rotation cypher key: \n");
-            scanf("%d", &rotkey);
+            scanf("%d", &key);
         
         case 2:
-            printf("\nYou have selected rotation cypher decryption.\n")
+            printf("\nYou have selected rotation cypher decryption.\n");
+            printf("Please enter the rotation cypher key: \n");
+            scanf("%d", &key);
         
         case 3:
             printf("\nYou have selected substitution cypher encryption.\n")
