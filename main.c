@@ -7,8 +7,8 @@ int main()
     //The following two lines are the setup code.
     //These lines initialise the variables to be used in the program.
     int option, key, letter; //this line initialises 3 integer variables called "option", "key", and "letter".
-    char text[100], substitute[100]; //this line initialises a character array called "text", and a similar array called "substitute".
-    char alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    char text[100], substitute[26]; //this line initialises a character array called "text", and a similar but smaller array called "substitute".
+    char alphabet[26] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     
     /*----------------------------------------*/
     
@@ -100,7 +100,10 @@ int main()
             switch(option)
             {
                 case 1:
-                    
+                    for(letter = 0; ((letter < 26) && (letter != "\0")); letter++)
+                        substitute[letter] = alphabet[letter];
+                        printf(substitute);
+                        return 0;
             }
 
         default:
