@@ -4,6 +4,8 @@ The user must input a key for the rotation cypher, and a substitute alphabet for
 Following this the user will input their message to be encrytped or decrypted.
 The user then chooses whether to encrypt or decrypt the message, which is then printed to the console.*/
 
+//The rotation cypher works, but the substitution cypher does not.
+
 
 
 
