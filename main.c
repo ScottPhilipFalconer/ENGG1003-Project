@@ -2,7 +2,7 @@
 
 int main()
 {
-    int key, initoption, y, z; //this line initialises 4 int variables.
+    int initoption, rotkey, subkey; //this line initialises 3 int variables.
     
     /*----------------------------------------*/
     
@@ -16,6 +16,26 @@ int main()
     //This allows the use of a switch case function.  
     
     /*----------------------------------------*/
+    
+    switch(initoption)
+    {
+        case 1:
+            printf("\nYou have selected rotation cypher encryption.\n");
+            printf("Please enter the rotation cypher key: \n");
+            scanf("%d", &rotkey);
+        
+        case 2:
+            printf("\nYou have selected rotation cypher decryption.\n")
+        
+        case 3:
+            printf("\nYou have selected substitution cypher encryption.\n")
+        
+        case 4:
+            printf("\nYou have selected substitution cypher decryption.\n")
+        
+        default:
+            printf("\nPlease select a valid option.");
+    }
     
     //each task as different function
     //may need to move code around, not final order
