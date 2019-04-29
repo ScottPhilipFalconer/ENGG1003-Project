@@ -24,7 +24,7 @@ int main()
             printf("Please enter the rotation cypher key: \n");
             scanf("%d", &key);
             printf("Select an option.\n");
-            printf("1. Encrypt\n2. Decrypt");
+            printf("1. Encrypt\n2. Decrypt\n");
             scanf("%d", &option);
             
             switch(option)
@@ -32,11 +32,12 @@ int main()
                 case 1:
                     printf("Enter a word to be encrypted, in all capital letters: \n");
                     scanf("%c", &word);
+                    return option;
                 case 2:
                     printf("Enter a word to be decrypted, in all capital letters: \n");
                     scanf("%c", &word);
                 default:
-                    printf("Please select a valid option.\n");
+                    printf("Invalid option.\n");
             }
         case 2:
             printf("You have selected substitution cypher.\n");
@@ -44,7 +45,7 @@ int main()
             scanf("%d", &key);
 
         default:
-            printf("Please select a valid option.\n");
+            printf("Invalid option.\n");
     }
     
     //each task as different function
