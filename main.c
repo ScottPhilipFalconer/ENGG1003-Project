@@ -33,10 +33,10 @@ int main()
             scanf("%d", &key);
         
         case 3:
-            printf("\nYou have selected substitution cypher encryption.\n")
+            printf("\nYou have selected substitution cypher encryption.\n");
         
         case 4:
-            printf("\nYou have selected substitution cypher decryption.\n")
+            printf("\nYou have selected substitution cypher decryption.\n");
         
         default:
             printf("\nPlease select a valid option.");
