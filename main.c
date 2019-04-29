@@ -25,7 +25,7 @@ int main()
             scanf("%d", &key);
             printf("Please enter the message, in all capital letters and with no spaces: \n");
             scanf("%s", &text);
-            printf("Select an option.\n");
+            printf("Select an option:\n");
             printf("1. Encrypt\n2. Decrypt\n");
             scanf("%d", &option);
             
@@ -36,6 +36,7 @@ int main()
                     printf("Encrypted text: %s\n", text);
                     return 0;
                 case 2:
+                    printf("Key: %d\n", key);
                     printf("Decrypted text: %s\n", text);
                     return 0;
                 default:
@@ -47,6 +48,11 @@ int main()
             printf("You have selected substitution cypher.\n");
             printf("Please enter the substitution cypher key: \n");
             scanf("%d", &key);
+            printf("Please enter the message, in all capital letters and with no spaces: \n");
+            scanf("%s", &text);
+            printf("Select an option:\n");
+            printf("1. Encrypt\n2. Decrypt\n");
+            scanf("%d", &option);
 
         default:
             printf("Invalid option.\n");
