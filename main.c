@@ -2,8 +2,12 @@
 
 int main()
 {
-    int option, key, letter; //this line initialises 3 int variables.
-    char text[100];
+    /*----------------------------------------*/
+    
+    //The following two lines are the setup code.
+    //These lines initialise the variables to be used in the program.
+    int option, key, letter; //this line initialises 3 integer variables called "option", "key", and "letter".
+    char text[100]; //this line initialises a character array called "text".
     
     /*----------------------------------------*/
     
@@ -12,39 +16,57 @@ int main()
     printf("Please choose an option:\n");
     printf("1. Rotation cypher\n2. Substitution cypher\n");
     scanf("%d", &option);
-    //The program assigns the entered number to the integer variable option.
+    //The program assigns the entered number to the integer variable "option".
     //This allows the use of a switch case function.  
     
     /*----------------------------------------*/
     
-    switch(option)
+    //The switch function allows for a basic menu system.
+    //This lets the user choose the appropriate action.
+    switch(option) //This line states that the switch function is dependant on the value for "option".
     {
+        //Cases are determined by the number entered in the previous section, now stored in "option".
         case 1:
+            //Case 1 is for a rotation cypher.
+            //It prompts the user to enter data that will be used later.
+            
             printf("You have selected rotation cypher.\n");
             printf("Please enter the rotation cypher key: \n");
-            scanf("%d", &key);
+            scanf("%d", &key); //This line scans the data entered and allaocates it to the int variable "key".
             printf("Please enter the message, in all capital letters and with no spaces: \n");
-            scanf("%s", &text);
+            scanf("%s", &text); //This line scans and allocates the data entered into the character array "text".
             printf("Select an option:\n");
             printf("1. Encrypt\n2. Decrypt\n");
-            scanf("%d", &option);
+            scanf("%d", &option); //This line leads to another switch function within case 1.
             
-            switch(option)
+            switch(option) //The variable "option" has been overwritten for this new switch function.
             {
+                //This switch function is purely output.
+                //Depending on the previous input from the user it encrypts or decrypts.
                 case 1:
+                    //Case 1 here is for encryption of data.
+                    //The initial setup "for" line defines the parameters of the integer "letter".
                     for(letter = 0; ((letter < 100) && (text[letter] != "\0")); letter++)
+                        //As C begins counting from 0, the value of "letter" starts at 0.
+                        //The variable is then defined to be within the parameters of the array size.
+                        //Using the Boolean symbol for "and" the variable is defined to not be "\0" as well.
+                        //Finally the variable "letter" is advanced in value by 1, assigning it to the next letter in the array.
                         if((text[letter] >= 65) && (text[letter] <= 90))
+                        //65 and 90 are the ASCII values for A and Z respectively.
+                        //The if statement here sets the bounds for the data to be any letter between A and Z.
                         {
-                            text[letter] = text[letter] + key;
-                            if(text[letter] > 90)
+                            text[letter] = text[letter] + key; //This formula uses the previously input "key" to calculate the value of each letter.
+                            if(text[letter] > 90) //This is an internal if statement for if the value from the previous formula is greater than Z.
                             {
-                            text[letter] = text[letter] - 90 + 65 - 1;
+                            text[letter] = text[letter] - 90 + 65 - 1; //This allows the text to "wrap around" the end of the alphabet.
                             }
                         }
-                        printf("Key: %d\n", key);
-                        printf("Encrypted text: %s\n", text);
+                        printf("Key: %d\n", key); //This line prints the key entered by the user previously, allowing to check it if the output is wrong.
+                        printf("Encrypted text: %s\n", text); //This line prints the newly encrypted text as one continuous word.
                         return 0;
                 case 2:
+                    //Case 2 is for decryption of data.
+                    //The initial setup line is the same as in case 1.
                     for(letter = 0; ((letter < 100) && (text[letter] != "\0")); letter++)
                         if((text[letter] >= 65) && (text[letter] <= 90))
                         {
