@@ -2,7 +2,18 @@
 
 int main()
 {
+    int key, initoption, y, z;
     
+    /*----------------------------------------*/
+    //the following block of code gives the user a choice of four options.
+    printf("Please choose an option:\n");
+    printf("1. Rotation cypher encryption.\n2. Rotation cypher decryption.\n");
+    printf("3. Substitution cypher encryption.\n4. Substitution cypher decryption.\n");
+    scanf("%d", &initoption);
+    //The user enters the desired options number.
+    //The program assigns the entered number to the integer variable initoption.
+    //This allows the use of a switch case function.  
+    /*----------------------------------------*/
     //each task as different function
     //may need to move code around, not final order
     //must initialise all variables etc first
@@ -27,12 +38,12 @@ int main()
         
             //encryption
                 //scan text to encode
-                    printf("Please enter the first word to be encoded, in all upper case: "); 
-                    //perhaps replace first with %d st/nd/rd/th
-                    scanf("%c", &wordnumber);
+                    printf("Please enter a word to be encoded, in all upper case: \n"); //this line will print the enclosed text to the console with a space at the end
+                    scanf("%c", &wordnumber); //this line will scan a word entered by the user, and store it as a character in the variable wordnumber
                     //repeat above lines until message complete
                     //potentially input 0 to end input
-                    //user prompt includes key?
+                    printf("Please enter the encryption key: \n"); //may lead with key, so only input once
+                    scanf("%d", &enrotkey); //this line will scan a number entered by the user, and store in the integer enrotkey (encryption rotation key)
                     //read as string/char
                     //string will only be read until whitespace
                     //assign to variable/string/char
@@ -48,12 +59,13 @@ int main()
                 
             //decryption
                 //scan encoded text
-                    printf("Please enter the first word to be decoded, in all upper case: ");
+                    printf("Please enter a word to be decoded, in all upper case: ");
                     //perhaps replace first with %d st/nd/rd/th
                     scanf("%c", &wordnumber);
                     //repeat above lines until message complete
                     //potentially input 0 to end input
-                    //user prompt includes key?
+                    printf("Please enter the decryption key: ");
+                    scanf("%d", &derotkey);
                     //read as string/char
                     //string will only be read until whitespace
                     //assign to variable/string/char
