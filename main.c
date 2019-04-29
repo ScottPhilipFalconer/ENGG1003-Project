@@ -100,10 +100,14 @@ int main()
             switch(option)
             {
                 case 1:
-                    for(letter = 0; ((letter < 26) && (letter != "\0")); letter++)
+                    while(text[letter] / alphabet[letter] == 1)
+                    {    
                         alphabet[letter] = substitute[letter];
-                        printf(alphabet);
-                        return 0;
+                        text[letter] = alphabet[letter];
+                        letter++;
+                    }
+                printf("%s", text);
+                return 0;
             }
 
         default:
