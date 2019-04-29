@@ -129,14 +129,14 @@ int main()
             printf("You have selected brute-force attack on rotation cypher\n");
             printf("Please enter the message in all caps with no spaces: \n");
             scanf("%s", &text);
-            key = 0;
-            while(key < 26)
+            key = 0; //This line sets the key at zero so it can be intervalled.
+            while(key < 26)//this allows the code to run only 26 times, as any rotation past that would bring the alphabet back to normal.
             {
-                for(letter = 0; ((letter < 100) && (text[letter] != "\0")); letter++)
+                for(letter = 0; ((letter < 100) && (text[letter] != "\0")); letter++)//this for statement is the same as encryption of rotation cypher case 1.
                     if((text[letter] >= 65) && (text[letter] <= 90))
-                        //This if statement is the same as in case 1.
+                        //This if statement is the same as in encryption of rotation cypher case 1.
                     {
-                        text[letter] = text[letter] - key; //This formula is the reverse of case 1, allowing for decryption.
+                        text[letter] = text[letter] - key; //This formula is the same as decryption of rotation cypher with known key.
                     }
                     if(text[letter] < 65) //There is a possibility the value of a letter may be less than A, this if statement allows for that.
                     {
