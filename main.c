@@ -94,54 +94,7 @@ int main()
     
     
     /*------------------------------pass mark------------------------------*/
-    
-    
-        /*--------------rotation cypher--------------*/
-        
-            //encryption
-                //scan text to encode
-                  /*  printf("Please enter a word to be encoded, in all upper case: \n"); //this line will print the enclosed text to the console with a space at the end
-                    scanf("%c", &wordnumber); //this line will scan a word entered by the user, and store it as a character in the variable wordnumber
-                    //repeat above lines until message complete
-                    //potentially input 0 to end input
-                    printf("Please enter the encryption key: \n"); //may lead with key, so only input once
-                    scanf("%d", &enrotkey); //this line will scan a number entered by the user, and store in the integer enrotkey (encryption rotation key)
-                    //read as string/char
-                    //string will only be read until whitespace
-                    //assign to variable/string/char
-                //run encoding key provided
-                    //during loop?
-                    //number of letters offset
-                    //create algorithm using key
-                    //insert scanned input into algorithm
-                    //store result in ?
-                //print encoded text to console
-                    printf("encoded text\noriginal input?\nkey?");
 
-                
-            //decryption
-                //scan encoded text
-                    printf("Please enter a word to be decoded, in all upper case: ");
-                    //perhaps replace first with %d st/nd/rd/th
-                    scanf("%c", &wordnumber);
-                    //repeat above lines until message complete
-                    //potentially input 0 to end input
-                    printf("Please enter the decryption key: ");
-                    scanf("%d", &derotkey);
-                    //read as string/char
-                    //string will only be read until whitespace
-                    //assign to variable/string/char
-                //run decoding key provided
-                    //during loop?
-                    //number of letters offset
-                    //create algorithm using key
-                    //insert scanned input into algorithm
-                    //store result in ?
-                //print decoded text to console
-                    printf("decoded text\noriginal input?\nkey?");
-
-                
-        /*-------------------------------------------*/
         
         /*--------------substitution cypher--------------*/
         
