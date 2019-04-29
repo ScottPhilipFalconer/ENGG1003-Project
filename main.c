@@ -101,8 +101,8 @@ int main()
             {
                 case 1:
                     for(letter = 0; ((letter < 26) && (letter != "\0")); letter++)
-                        substitute[letter] = alphabet[letter];
-                        printf(substitute);
+                        alphabet[letter] = substitute[letter];
+                        printf(alphabet);
                         return 0;
             }
 
