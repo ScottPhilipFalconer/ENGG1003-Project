@@ -23,6 +23,9 @@ int main()
             printf("\nYou have selected rotation cypher encryption.\n");
             printf("Please enter the rotation cypher key: \n");
             scanf("%d", &key);
+            printf("Please select an option.\n");
+            printf("1. Enter a word to be encrypted.\n 2. End message.\n")
+            scanf("%d", &option);
         
         case 2:
             printf("\nYou have selected rotation cypher decryption.\n");
