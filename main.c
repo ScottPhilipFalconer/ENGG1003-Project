@@ -7,7 +7,7 @@ int main()
     //The following two lines are the setup code.
     //These lines initialise the variables to be used in the program.
     int option, key, letter; //this line initialises 3 integer variables called "option", "key", and "letter".
-    char text[100]; //this line initialises a character array called "text".
+    char text[100], substitute[100]; //this line initialises a character array called "text", and a similar array called "substitute".
     
     /*----------------------------------------*/
     
@@ -58,36 +58,38 @@ int main()
                             text[letter] = text[letter] + key; //This formula uses the previously input "key" to calculate the value of each letter.
                             if(text[letter] > 90) //This is an internal if statement for if the value from the previous formula is greater than Z.
                             {
-                            text[letter] = text[letter] - 90 + 65 - 1; //This allows the text to "wrap around" the end of the alphabet.
+                                text[letter] = text[letter] - 90 + 65 - 1; //This allows the text to "wrap around" the end of the alphabet.
                             }
                         }
                         printf("Key: %d\n", key); //This line prints the key entered by the user previously, allowing to check it if the output is wrong.
                         printf("Encrypted text: %s\n", text); //This line prints the newly encrypted text as one continuous word.
-                        return 0;
+                        return 0; //return 0 terminates the program.
                 case 2:
                     //Case 2 is for decryption of data.
                     //The initial setup line is the same as in case 1.
                     for(letter = 0; ((letter < 100) && (text[letter] != "\0")); letter++)
                         if((text[letter] >= 65) && (text[letter] <= 90))
+                        //This if statement is the same as in case 1.
                         {
-                            text[letter] = text[letter] - key;
-                            if(text[letter] < 65)
+                            text[letter] = text[letter] - key; //This formula is the reverse of case 1, allowing for decryption.
+                            if(text[letter] < 65) //There is a possibility the value of a letter may be less than A, this if statement allows for that.
                             {
-                            text[letter] = text[letter] + 90 - 65 + 1;
+                                text[letter] = text[letter] + 90 - 65 + 1; //This line allows values less than A to "wrap around" the alphabet back to Z.
                             }
                         }
-                        printf("Key: %d\n", key);
-                        printf("Encrypted text: %s\n", text);
+                        printf("Key: %d\n", key); //This line prints the key entered by the user.
+                        printf("Decrypted text: %s\n", text); //This line prints the decrypted text.
                         return 0;
                 default:
-                    printf("Invalid option.\n");
+                    printf("Invalid option.\n"); //This line is printed if a number not presented as an option is entered, the program will end.
                     return 0;
             }
-            
+        //The following case 2 is for the intial switch function.    
         case 2:
+            //Case 2 is for a substitution cypher.
             printf("You have selected substitution cypher.\n");
             printf("Please enter the substitution cypher key: \n");
-            scanf("%d", &key);
+            scanf("%d", &key); //This line scans and stores the data entered into the variable "key".
             printf("Please enter the message, in all capital letters and with no spaces: \n");
             scanf("%s", &text);
             printf("Select an option:\n");
