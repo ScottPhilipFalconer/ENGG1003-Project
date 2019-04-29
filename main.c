@@ -2,13 +2,13 @@
 
 int main()
 {
-    int option, key; //this line initialises 2 int variables.
-    char text[100], letter;
+    int option, key, letter; //this line initialises 3 int variables.
+    char text[100];
     
     /*----------------------------------------*/
     
     //the following block of code gives the user a choice of four options.
-    //The user enters the desired options number.
+    //The user enters the number corresponding to their desired option.
     printf("Please choose an option:\n");
     printf("1. Rotation cypher\n2. Substitution cypher\n");
     scanf("%d", &option);
@@ -32,9 +32,12 @@ int main()
             switch(option)
             {
                 case 1:
-                    printf("Key: %d\n", key);
-                    printf("Encrypted text: %s\n", text);
-                    return 0;
+                    for(number = 0; ((number < 100) && (text[number] != "\0")); number++)
+                        if((text[number] >= 65) && (text[number] <= 90))
+                            text[number] = text[number] + key;
+                            printf("Key: %d\n", key);
+                            printf("Encrypted text: %s\n", text);
+                            return 0;
                 case 2:
                     printf("Key: %d\n", key);
                     printf("Decrypted text: %s\n", text);
